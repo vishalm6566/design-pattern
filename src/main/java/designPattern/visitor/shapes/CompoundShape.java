@@ -29,7 +29,7 @@ public class CompoundShape implements Shape {
 
     @Override
     public String accept(Visitor visitor) {
-        return visitor.visitCompoundGraphic(this);
+        return visitor.visit(this);
     }
 
     public void add(Shape shape) {

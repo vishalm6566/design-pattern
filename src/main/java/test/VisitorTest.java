@@ -1,7 +1,9 @@
 package test;
 
+import designPattern.visitor.Visitor;
 import designPattern.visitor.XMLExportVisitor;
 import designPattern.visitor.shapes.*;
+import designPattern.visitor.shapes.JSONExportVisitor;
 
 public class VisitorTest {
     public static void main(String[] args) {
@@ -22,7 +24,8 @@ public class VisitorTest {
     }
 
     private static void export(Shape... shapes) {
-        XMLExportVisitor exportVisitor = new XMLExportVisitor();
+//        Visitor exportVisitor = new XMLExportVisitor();
+        Visitor exportVisitor = new JSONExportVisitor();
         System.out.println(exportVisitor.export(shapes));
     }
 }

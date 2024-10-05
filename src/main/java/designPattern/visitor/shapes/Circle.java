@@ -12,7 +12,7 @@ public class Circle extends Dot {
 
     @Override
     public String accept(Visitor visitor) {
-        return visitor.visitCircle(this);
+        return visitor.visit(this);
     }
 
     public int getRadius() {

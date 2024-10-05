@@ -13,7 +13,7 @@ public class XMLExportVisitor implements Visitor {
         return sb.toString();
     }
 
-    public String visitDot(Dot d) {
+    public String visit(Dot d) {
         return "<dot>" + "\n" +
                 "    <id>" + d.getId() + "</id>" + "\n" +
                 "    <x>" + d.getX() + "</x>" + "\n" +
@@ -21,7 +21,7 @@ public class XMLExportVisitor implements Visitor {
                 "</dot>";
     }
 
-    public String visitCircle(Circle c) {
+    public String visit(Circle c) {
         return "<circle>" + "\n" +
                 "    <id>" + c.getId() + "</id>" + "\n" +
                 "    <x>" + c.getX() + "</x>" + "\n" +
@@ -30,7 +30,7 @@ public class XMLExportVisitor implements Visitor {
                 "</circle>";
     }
 
-    public String visitRectangle(Rectangle r) {
+    public String visit(Rectangle r) {
         return "<rectangle>" + "\n" +
                 "    <id>" + r.getId() + "</id>" + "\n" +
                 "    <x>" + r.getX() + "</x>" + "\n" +
@@ -40,7 +40,7 @@ public class XMLExportVisitor implements Visitor {
                 "</rectangle>";
     }
 
-    public String visitCompoundGraphic(CompoundShape cg) {
+    public String visit(CompoundShape cg) {
         return "<compound_graphic>" + "\n" +
                 "   <id>" + cg.getId() + "</id>" + "\n" +
                 _visitCompoundGraphic(cg) +
